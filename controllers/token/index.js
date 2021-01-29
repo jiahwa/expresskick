@@ -7,7 +7,7 @@ var app = express()
 var CONTEXT = require('../context')
 
 // database
-var {tokens} = require('./db')
+var {tokens} = require('../../db')
 
 // middleware
 
@@ -20,7 +20,7 @@ var {tokens} = require('./db')
  */
 
 app.get(`${CONTEXT}/getToken`, function(req, res, next){
-  res.send(tokens);
+  res.send(...tokens.slice(-1));
 });
 
 module.exports = app

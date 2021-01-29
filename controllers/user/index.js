@@ -7,7 +7,7 @@ var app = express()
 var CONTEXT = require('../context')
 
 // database
-var {users} = require('./db')
+var {users} = require('../../db')
 
 // middleware
 
@@ -19,6 +19,6 @@ var {users} = require('./db')
  */
 app.post(`${CONTEXT}/users`, function(req, res, next){
   var user = users.filter((u) => req.userID)
-  res.send(users);
+  res.send(user);
 });
 module.exports = app

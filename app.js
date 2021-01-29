@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var controllers = require('./controllers')
+var {server, CONTEXT} = require('./controllers')
 
 var app = express();
 
@@ -30,7 +30,7 @@ app.use(CONTEXT, (req, res, next) => {
 
   // key is not preset
   if(!key) {
-    return next(res.status(400).send('api  key required'))
+    return next(res.status(400).send('api key required'))
   }
   // key is invalid
   if(!~apiKeys.indexOf(key)) {
@@ -49,7 +49,7 @@ app.use(CONTEXT, (req, res, next) => {
 var apiKeys = ['foo', 'bar', 'baz']
 
 // load web-server controllers
-require('./controllers')(app)
+server(app)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

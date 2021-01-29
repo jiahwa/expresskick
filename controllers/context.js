@@ -1,5 +1,5 @@
 /**
  * declare Server context
  */
-var CONTEXT = 'api'
+var CONTEXT = '/api'
 module.exports = CONTEXT

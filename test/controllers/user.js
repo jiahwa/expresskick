@@ -2,8 +2,8 @@ var request = require('./request')
 var logger = require('morgan')
 
 function getUserName(userID) {
-    return request(userID, res => {
-        logger(`Res data is ${res.id}, createTime is: ${res.createTime}`)
+    return request({url: '/users', data:  {userID}}, res => {
+        logger(`UserID is ${res.id}, email is ${res.createTime}`)
     })
 }
 

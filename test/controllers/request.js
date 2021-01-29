@@ -1,15 +1,21 @@
 var http = require('http')
-
-module.exports = function request(userID) {
+/**
+ * 
+ * @param {object} params {url, data}
+ * @param {*} callback 
+ */
+module.exports = function request({url, data}, callback) {
+    var defaults = {}
+    var postData = Object.assign(defaults, data)
+    
     var options = {
         hostname: 'localhost',
         port: 3000,
-        path: '/users',
+        path: url,
         method: 'POST' 
     }
-    var postData = { userID }
     var req = http.request(options, res => {
-        res.on('data', data => data)
+        res.on('end', data => callback(data))
     })
 
     // write into request body
