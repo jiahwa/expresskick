@@ -6,6 +6,6 @@ it('works with callback', function(){
     // expect.assertions(1);
     return user.getUserName('admin', data => {
         expect.assertions(1);
-        expect(data.email).toEqual('yujiahua@csii.com.cn')
+        expect(data.name).toEqual('jiahwa')
     })
 })
