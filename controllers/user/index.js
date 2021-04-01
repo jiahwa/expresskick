@@ -6,10 +6,10 @@ var app = express()
 
 var CONTEXT = require('../context')
 
-// database
+//database
 var {users} = require('../../db')
 
-// middleware
+//middleware
 
 /**
  * [post] method 
@@ -18,7 +18,9 @@ var {users} = require('../../db')
  * example: http://localhost:3000/api/users
  */
 app.post(`${CONTEXT}/users`, function(req, res, next){
-  var user = users.filter(u => u.name === req.query.userName)
+  var user = users.filter(u => u.name === req.body.userName)
+  //Test for 500 err response
+  //res.send({'status': 'error'}).status(500)
   res.send(user);
 });
 module.exports = app
