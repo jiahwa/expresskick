@@ -1,5 +1,5 @@
 'use strict';
-// jest.mock('../request');
+jest.mock('../request');
 
 import * as user from '../user';
 

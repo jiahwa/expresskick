@@ -45,3 +45,20 @@ hua-xiao-hua-2:expresskick yujiahua$ npm test
 ├── node_modules
 └── views
 ```
+
+## Project setup
+```
+npm install
+```
+
+### Start node serve, visit via `localhost:3000`
+```
+npm start
+```
+
+### Jest mock testing
+If you've started the node server, `Jest mock` ( [user.test.js, line 2](./test/__tests__/user.test.js) ) won't work yet.
+
+```
+npm test
+```
