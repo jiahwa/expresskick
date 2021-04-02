@@ -1,4 +1,4 @@
-import { users } from '../../db'
+import { users } from '../db'
 
 export default function request(url, {userName}) {
   return new Promise((resolve, reject) => {
