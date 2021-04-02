@@ -19,14 +19,9 @@ export default function request(url, {userName}) {
     }, response => {
       let data = '';
       response.on('data', _data => (data += _data));
-      response.on('end', () => resolve(
-        data.length > 0
-        ? JSON.parse(data)
-        :null ));
+      response.on('end', () => resolve(JSON.parse(data)));
     })
-    req.on('error', error => {
-      console.error(error)
-    })
+    // req.on('error', error => console.error(error))
     req.write(data)
     req.end()
   });
