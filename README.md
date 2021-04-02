@@ -3,7 +3,7 @@ Base on express platform, kick off one ball first
 ## `TypeError: Cannot read property 'then' of undefined`
 How to solve: 
 
-In An async example, Jest been imported for testing, coverage testing example as below but fialed. ( [Complete errer log here, click me](./UNDEFINED.md) )
+In an async example, Jest been imported for testing, coverage testing example as below but fialed. ( [Complete errer log here, click me](./UNDEFINED.md) )
 ```
 hua-xiao-hua-2:expresskick yujiahua$ npm test
 
