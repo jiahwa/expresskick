@@ -25,7 +25,7 @@ hua-xiao-hua-2:expresskick yujiahua$ npm test
 ├   └── request.js
 ├── __test__
 ├   └── request.test.js
-├── test
+├── models
 ├   └── request.js
 ├── node_modules
 └── views
