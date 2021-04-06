@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "init mongdb": "node server/install"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
