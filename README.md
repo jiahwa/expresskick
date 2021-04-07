@@ -68,6 +68,7 @@ npm test
 # - Windows system
 cd myproject
 npm install mongodb --save
+
 # 1.Download the right MongoDB version from MongoDB
 # 2.Create a database directory (in this case under /data, eg: Enter dictionary path `C:\Program Files\MongoDB\Server\4.4\data`, use command `mongod.exe --dbpath=..\data\db` in windows).
 # visit your browser,enter: http://localhost:27017, if you get some information as below, it works well:
@@ -82,11 +83,18 @@ npm install mongodb --save
 #   logpath=G:\mongodb\data\log\mongo.log`
 #
 # Enter mongodb root dictionary, use command: 
-#
-#   `mongod -dbpath ".\data\db" -logpath ".\data\log\mongo.log" -install -serviceName "MongoDB"`
-#
+
+mongod -dbpath ".\data\db" -logpath ".\data\log\mongo.log" -install -serviceName "MongoDB"
+
+# 5. Start and close,
+
+net start MongoDB
+net stop MongoDB
+
 # More details [open the mongodb website](http://mongodb.github.io/node-mongodb-native/3.4/quick-start/quick-start/)
+
 mongod --dbpath=/data
+
 # You should see the mongod process start up and print some status information.
 #
 # - MacOS system
