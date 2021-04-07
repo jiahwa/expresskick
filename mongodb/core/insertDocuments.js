@@ -1,10 +1,9 @@
-export function insertDocuments() {
+export function insertDocuments(insertedArray) {
 // Get the documents collection
   const collection = db.collection('documents');
   // Insert some documents
-  collection.insertMany([
-    {a : 1}, {a : 2}, {a : 3}
-  ], function(err, result) {
+  const array = insertedArray|| [] // [{a : 1}, {a : 2}, {a : 3}]
+  collection.insertMany(array, function(err, result) {
     assert.equal(err, null);
     assert.equal(3, result.result.n);
     assert.equal(3, result.ops.length);
