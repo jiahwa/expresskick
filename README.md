@@ -56,9 +56,29 @@ npm install
 npm start
 ```
 
-### Jest mock testing
+## Jest mock testing
 If you've started the node server, `Jest mock` ( [user.test.js, line 2](./test/__tests__/user.test.js) ) won't work yet.
 
 ```
 npm test
+```
+
+## Mongodb install
+```sh
+# - Windows system
+cd myproject
+npm install mongodb --save
+# 1.Download the right MongoDB version from MongoDB
+# 2.Create a database directory (in this case under /data, eg: Enter dictionary path `C:\Program Files\MongoDB\Server\4.4\data`, use command `mongod.exe --dbpath=..\data\db` in windows).
+# visit your browser,enter: http://localhost:27017, if you get some information as below, it works well:
+#
+#   `It looks like you are trying to access MongoDB over HTTP on the native driver port.`
+#
+# 3.Install and start a mongod process.
+# More details [open the mongodb website](http://mongodb.github.io/node-mongodb-native/3.4/quick-start/quick-start/)
+mongod --dbpath=/data
+# You should see the mongod process start up and print some status information.
+#
+# - MacOS system
+#
 ```
