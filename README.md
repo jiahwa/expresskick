@@ -75,6 +75,16 @@ npm install mongodb --save
 #   `It looks like you are trying to access MongoDB over HTTP on the native driver port.`
 #
 # 3.Install and start a mongod process.
+# 4. Auto start and close Mongodb serve
+# Write two lines code into new file /mongo.config at mongodb root, eg: C:\Program Files\MongoDB\Server\4.4\mongo.config
+#
+#   `dbpath=G:\mongodb\data\db
+#   logpath=G:\mongodb\data\log\mongo.log`
+#
+# Enter mongodb root dictionary, use command: 
+#
+#   `mongod -dbpath ".\data\db" -logpath ".\data\log\mongo.log" -install -serviceName "MongoDB"`
+#
 # More details [open the mongodb website](http://mongodb.github.io/node-mongodb-native/3.4/quick-start/quick-start/)
 mongod --dbpath=/data
 # You should see the mongod process start up and print some status information.
