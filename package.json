@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "jest --coverage",
-    "init mongodb": "node server/install"
+    "init mongodb": "node mongodb/install",
+    "start mongoclient": "node mongodb/app"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
